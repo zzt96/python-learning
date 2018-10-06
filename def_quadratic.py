@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import math
 def quadratic(a,b,c):
+	# 判断输入参数是否是正规的值
 	for i in [a,b,c]:
 		if not isinstance(i, (int, float)):
 			raise TypeError(i,'is a bad operand type')
