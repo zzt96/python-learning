@@ -18,3 +18,4 @@ def move(n, a, b, c): # 借助b将a上所有的盘子移动到c
 # 如果只有一个盘子，那么将它直接从起始针移动到目的针。
 # 这样不断地将相对最大的盘子移动到目的针上，就完成了。
 # https://blog.csdn.net/not_guy/article/details/72823951
+
