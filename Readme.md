@@ -27,11 +27,19 @@ all resources are from liao:https://www.liaoxuefeng.com
 - list，dict和str不是iterator,因为iterator是数据流，惰性，只有需要返回下一个数据的时候才会进行计算
 - 但是可以通过iter()函数获得一个Iterator对象：iter('abc')
 
-### 函数式编程
+## 函数式编程
 - 纯函数式编程：输入确定，输出就确定，没有副作用
 - 非纯函数式编程，可以使用变量
 - 函数式编程允许把函数本体作为参数传入下一个函数。
 
+### 高阶函数
 #### map/reduce
 - map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator返回
 - reduce把一个函数作用在一个序列[x1, x2, x3, ...]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做**累积计算**
+
+#### filter
+- fliter接受一个函数和一个序列，fliter把函数作用于序列上的每一个元素，然后根据true或者false决定是否保留
+- filter()函数返回的是一个Iterator，也就是一个惰性序列，所以要强迫filter()完成计算结果，需要用list()函数获得所有结果并返回list。
+
+#### sorted
+
